@@ -1,43 +1,22 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-  return "<p>Hello, World!</p>"
+@app.route('/')
+def displayForm():
+  return render_template('form.html')
 
-@app.route('/hello', methods=['GET', 'POST'])
-def hello():
-  return 'Hello, World!!'
+@app.route('/results', methods=['GET'])
+def form_results():
 
-formData = f"""
-<form action="/results" method="POST">
-  Realm
-  <input type="text" name="realm">
-  <br>
-  Token 
-  <input type="password" name="token">
-  <br>
-  RUM Token 
-  <input type="password" name="rum">
-  <br>
-  Environment Name
-  <input type="text" name="envName">
-  <br>
-  <input type="button" value="Initiate"/>
-</form>
-"""
+    context = {
+        'realm': request.args.get('realm'),
+        'token': request.args.get('token'),
+        'rum': request.args.get('rum'),
+        'envName': request.args.get('envName'),
+    }
 
-@app.route('/entryForm')
-def requiredData():
-  return formData
+    return render_template('scenarios.html', **context)
 
-@app.route('/results', methods=['POST'])
-def formResults():
-  realm = request.form.get("realm")
-  token = request.form.get("token")
-  rum = request.form.get("rum")
-  envName = request.form.get("envName")
-  return f'{realm}{token}{rum}{envName} now working'
 
 if __name__ == '__main__':
-  app.run()
+  app.run(debug=True, port=3000)
