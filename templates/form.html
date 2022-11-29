@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <title></title>
 </head>
 <body>
   <form action="/results" method="GET">
@@ -12,15 +13,15 @@
     <input type="text" name="realm">
     <br>
     Token 
-    <input type="text" name="token">
+    <input type="password" name="token">
     <br>
     RUM Token 
-    <input type="text" name="rum">
+    <input type="password" name="rum">
     <br>
     Environment Name
     <input type="text" name="envName">
     <br>
-    <input type="button" value="Initiate"/>
+    <input type="submit" value="Initiate">
   </form>
 </body>
 </html>
