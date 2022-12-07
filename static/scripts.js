@@ -44,9 +44,9 @@ $(document).ready(function () {
 });
 function changeImage(){
   let displayImage = document.getElementById("image1")
-  if(displayImage.src.match("./icons/play.png")){
-      displayImage.src = "./icons/pause.png"
+  if(displayImage.src.match("../icons/play.png")){
+      displayImage.src = "../icons/pause.png"
   } else {
-      displayImage.src = "./icons/play.png"
+      displayImage.src = "../icons/play.png"
   }
 }

@@ -1,0 +1,33 @@
+.status-bar {
+    display: flex
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.content {
+    display: flex;
+}
+
+.image1 {
+    height: 2em;
+    width: auto;
+    display: inline-block;
+}
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: Helvetica;
+}
