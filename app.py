@@ -17,6 +17,5 @@ def form_results():
 
     return render_template('scenarios.html', **context)
 
-
 if __name__ == '__main__':
   app.run(debug=True, port=3000)
