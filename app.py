@@ -17,6 +17,13 @@ def form_results():
 
     return render_template('scenarios.html', **context)
 
+# create a route with hello
+@app.route('/frontend')
+def hello():
+  # redirect to button page
+  return render_template('button.html')
+
+
 
 if __name__ == '__main__':
   app.run(debug=True, port=3000)
