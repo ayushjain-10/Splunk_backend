@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -26,4 +26,75 @@
   </form>
 </body>
 </html>
+ -->
 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="/static/css/main.css">
+ 
+   <title></title>
+ </head>
+ <body>
+ 
+   <div class="limiter">
+     <div class="container-login100">
+       <div class="wrap-login100">
+         <form class="login100-form validate-form" action="/results" method="GET">
+           <span class="login100-form-title p-b-26">
+             Enter the required information to connect to our services
+           </span>
+ 
+           <div class="wrap-input100 validate-input" data-validate = "Enter Realm">
+             <input class="input100" type="text" name="realm">
+             <span class="focus-input100" data-placeholder="Realm"></span>
+           </div>
+ 
+           <div class="wrap-input100 validate-input" data-validate="Enter Token">
+             <span class="btn-show-token"></span>
+             <input class="input100" type="password" name="token">
+             <span class="focus-input100" data-placeholder="Token"></span>
+           </div>
+ 
+           <div class="wrap-input100 validate-input" data-validate="Enter RUM Token">
+             <span class="btn-show-rum"></span>
+             <input class="input100" type="password" name="rum">
+             <span class="focus-input100" data-placeholder="RUM Token"></span>
+           </div>
+ 
+           <div class="wrap-input100 validate-input" data-validate="Enter Environment Name">
+             <span class="btn-show-envName"></span>
+             <input class="input100" type="text" name="envName">
+             <span class="focus-input100" data-placeholder="Environment Name"></span>
+           </div>
+           
+ <!-- FIRST BUTTON FOR BACKEND TEAM TO CONNECT TO -->
+           <div class="container-login100-form-btn">
+             <div class="wrap-login100-form-btn">
+               <div class="login100-form-bgbtn"></div>
+               <button class="login100-form-btn" type="submit">
+                 Initiate
+               </button>
+             </div>
+           </div>
+ 
+           <div class="text-center p-t-115">
+             <span class="txt1">
+               <a href="https://community.splunk.com/t5/Getting-Data-In/bd-p/getting-data-in0">Help</a>
+             </span>
+           </div>
+         </form>
+       </div>
+     </div>
+   </div>
+ 
+ </body>
+ </html>
+ 
