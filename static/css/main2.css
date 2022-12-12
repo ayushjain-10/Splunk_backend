@@ -31,3 +31,114 @@ body, html {
 	height: 100%;
 	font-family: Helvetica;
 }
+
+body{
+    background: #f2f2f2; 
+}
+
+.card-body{
+    border-radius: 10px;
+    padding-top: 7px;
+    margin: 10px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position:relative;
+    height: 150px;
+
+}
+
+h3{
+    color: #277CB8;
+}
+
+h4, p{
+    margin: 10px;
+    z-index: 1;
+    padding: 2px;
+}
+
+h4{
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.focus-input100 {
+    display: inline-block;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: #6a7dfe;
+    background: -webkit-linear-gradient(left, #21d4fd, #6AC042);
+    background: -o-linear-gradient(left, #21d4fd, #6AC042);
+    background: -moz-linear-gradient(left, #21d4fd, #6AC042);
+    background: linear-gradient(left, #21d4fd, #6AC042);
+  }
+  
+  .focus-input100::after {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #277CB8;
+    line-height: 1.2;
+  
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    padding-left: 5px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+
+
+    border-style: none;
+    width: 90px;
+    height: 32px;
+
+    background: #6AC042;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    float: right;
+    margin-bottom: 7px;
+    margin-right: 7px;
+}
+
+.btn-primary:hover{
+    background-color: #21d4fd;
+}

@@ -173,6 +173,7 @@ Input */
 }
 
 .input100 {
+  white-space: pre-wrap !important;
   font-size: 15px;
   color: #277CB8;
   line-height: 1.2;
@@ -180,12 +181,13 @@ Input */
   display: block;
   width: 100%;
   height: 45px;
-  background: transparent;
   padding: 0 5px;
+
 }
 
-/*---------------------------------------------*/ 
+/*--------------------gradient line under input-------------------------*/ 
 .focus-input100 {
+  display: inline-block;
   position: absolute;
   display: block;
   width: 100%;
@@ -237,6 +239,7 @@ Input */
 }
 
 .input100:focus + .focus-input100::after {
+  white-space: pre-wrap !important;
   top: -15px;
 }
 
