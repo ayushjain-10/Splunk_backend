@@ -1,5 +1,11 @@
 from flask import Flask, request, render_template
+from opentelemetry.instrumentation.flask import FlaskInstrumentor
+from opentelemetry.instrumentation.requests import RequestsInstrumentor
+from opentelemetry import trace
 app = Flask(__name__)
+FlaskInstrumentor().instrument_app(app)
+RequestsInstrumentor().instrument()
+
 
 @app.route('/', methods=['GET', 'POST'])
 def displayForm():
@@ -19,8 +25,10 @@ def form_results():
   
 @app.route('/test', methods=['GET', 'POST']) 
 def test(): 
-  print("Ayush")
-  return "Hello World!"
+  tracer = trace.get_tracer(__name__)
+  with tracer.start_as_current_span("Something") as span:
+    print("Ayush")
+    return "Hello World!"
 
 
 if __name__ == '__main__':
