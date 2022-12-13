@@ -1,11 +1,11 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def displayForm():
   return render_template('form.html')
 
-@app.route('/results', methods=['GET'])
+@app.route('/results', methods=['GET', 'POST'])
 def form_results():
 
     context = {
@@ -16,6 +16,10 @@ def form_results():
     }
 
     return render_template('scenarios.html', **context)
+  
+@app.route('/test', methods=['GET', 'POST']) 
+def test(): 
+ 	return "Hello World!!!!!" 
 
 
 if __name__ == '__main__':
